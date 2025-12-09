@@ -1,0 +1,2110 @@
+/* KHUSUS LOGIN & REGISTER */
+body.auth-page {
+    background: linear-gradient(135deg, #E9F5FB, #ffffff);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #2E3A45;
+}
+
+/* Card Login */
+.card-unique {
+    width: 480px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+    overflow: hidden;
+    border: 1px solid #D9DEE3;
+    animation: fadeIn 0.6s ease;
+}
+
+.card-header-wave {
+    background: linear-gradient(to right, #6FB6E6, #A3D4F2);
+    padding: 24px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.card-body {
+    padding: 28px;
+}
+
+/* Floating Input */
+.form-group {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 3px;
+    border-radius: 10px;
+    border: 1px solid #D9DEE3;
+    background: #ffffff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #6FB6E6;
+    box-shadow: 0 0 0 4px rgba(111,182,230,0.25);
+    outline: none;
+    background: #F2FAFF;
+
+}
+
+.form-label {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    font-size: 15px;
+    color: #7a8a9c;
+    pointer-events: none;
+    transition: 0.25s ease;
+    background: transparent;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    background: #2a2a2a; /* kalau dark mode */
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    padding: 0 4px;
+    color: #6FB6E6;
+    border-radius: 10px;
+}
+
+/* Button */
+.btn-shine {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #6FB6E6, #A3D4F2);
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-shine:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111,182,230,0.35);
+}
+
+/* Register Link */
+.text-link {
+    display: block;
+    margin-top: 18px;
+    text-align: center;
+    color: #6FB6E6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.text-link:hover {
+    color: #2E3A45;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body.auth-page {
+        background: #2a2a2a;
+        color: #e4e4e4;
+    }
+    .card-unique {
+        background: #2a2a2a;
+        border-color: #555;
+        box-shadow: none;
+    }
+    .form-input {
+        background: #2d2d2d;
+        color: white;
+        border-color: #555;
+    }
+    .form-input:focus {
+        background: #252525;
+    }
+    .form-label {
+        color: #ccc;
+    }
+    .text-link {
+        color: #A3D4F2;
+    }
+}
+
+
+
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #6FB6E6, #A3D4F2);
+    border: none;
+    color: white;
+    font-weight: 600;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+}
+.card-soft {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border: 1px solid #E2E8F0;
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+.card-soft:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+.card-header-soft {
+    background: linear-gradient(to right, #6FB6E6, #A3D4F2);
+    color: white;
+    padding: 14px;
+    border-radius: 14px 14px 0 0;
+    font-weight: 600;
+}
+
+/* ====== BUTTON ====== */
+.btn-soft {
+    background: linear-gradient(to right, #6FB6E6, #A3D4F2);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-soft:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111,182,230,0.35);
+}
+
+/* ==== Button Outline ==== */
+.btn-soft-outline {
+    background: transparent;
+    border: 2px solid #6FB6E6;
+    color: #6FB6E6;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+.btn-soft-outline:hover {
+    background: #6FB6E6;
+    color: white;
+    box-shadow: 0 4px 10px rgba(111,182,230,0.35);
+}
+
+/* ===== BARANG CARD ===== */
+.product-card {
+    border-radius: 14px;
+    border: 1px solid #DFE6ED;
+    padding: 15px;
+    background: #ffffff;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+}
+
+/* ====== MODAL ====== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-box {
+    background: #ffffff;
+    color: #2E3A45;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-btn {
+    background: #6FB6E6;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 12px;
+    color: #fff;
+    cursor: pointer;
+    margin: auto;
+    text-align: center;
+}
+
+.modal-btn:hover {
+    background: #5AA9D5;
+}
+
+/* ====== DARK MODE ====== */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #2a2a2a;
+        color: #e4e4e4;
+    }
+
+    .card-soft,
+    .product-card {
+        background: #2a2a2a;
+        color: white;
+        border: 1px solid #444;
+        box-shadow: none;
+    }
+}
+/* ==========================
+   NAVBAR GLOBAL STYLE
+   ========================== */
+   .navbar {
+    background: #1f2937 !important; /* dark-midnight */
+    padding: 10px 18px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+.navbar-brand span {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+/* Logo */
+.navbar-brand img {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+}
+
+/* Navbar link */
+.navbar-nav .nav-link {
+    color: #d1d7df !important;
+    font-weight: 500;
+    padding: 8px 14px !important;
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+    background: rgba(255,255,255,0.12);
+    color: #ffffff !important;
+    transform: translateY(-1px);
+}
+
+/* Active link */
+.navbar-nav .nav-link.active {
+    background: #6FB6E6;
+    color: white !important;
+}
+
+/* Badge Keranjang */
+.navbar .badge {
+    font-size: 11px;
+    padding: 5px 7px;
+}
+
+/* Profil + Logout */
+.navbar button.btn-outline-light {
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.navbar button.btn-outline-light:hover {
+    background: white;
+    color: #1f2937 !important;
+}
+
+/* Toggler */
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/* ======================
+   DARK MODE NAVBAR
+   ====================== */
+   @media (prefers-color-scheme: dark) {
+    .navbar {
+        background: #0f172a !important;
+    }
+
+    .navbar-nav .nav-link {
+        color: #d1d7df !important;
+    }
+
+    .navbar-nav .nav-link:hover {
+        background: rgba(255,255,255,0.15);
+    }
+
+    .navbar button.btn-outline-light {
+        border-color: #d1d7df;
+    }
+
+    .navbar button.btn-outline-light:hover {
+        background: #e5e5e5;
+        color: #000 !important;
+    }
+}
+/* ================== */
+/* GLOBAL & LAYOUT    */
+/* ================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f9fbfd;
+    color: #2e3a45;
+    line-height: 1.6;
+}
+
+main {
+    padding: 80px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 16px;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+/* RESPONSIVE GRID */
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-cols-1 { grid-template-columns: 1fr; }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 768px) {
+    .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+    main {
+        padding: 70px 16px 30px;
+    }
+}
+
+/* STAT CARD */
+.stat-card {
+    text-align: center;
+    padding: 20px 12px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 8px 0 4px;
+    color: #0288d1;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* BUTTON GROUP */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.btn-group a {
+    text-decoration: none;
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #121826;
+        color: #e2e8f0;
+    }
+
+    .stat-card,
+    .card-soft,
+    .product-card {
+        background: #1a202c;
+        border-color: #2d3748;
+        color: #e2e8f0;
+    }
+
+    .stat-value {
+        color: #4fc3f7;
+    }
+
+    .stat-label {
+        color: #94a3b8;
+    }
+}
+/* ========== CUSTOM NAVBAR ========== */
+.custom-navbar {
+    background: #1f2937;
+    padding: 12px 24px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Brand */
+.brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+/* Nav Menu (Desktop) */
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+.nav-link {
+    color: #d1d7df;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.nav-link.active {
+    background: #6FB6E6;
+    color: white !important;
+}
+
+/* Right Side */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-greeting {
+    color: white;
+    font-size: 15px;
+}
+/* Cart with badge */
+.nav-cart {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.nav-cart:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #ef4444;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 6px;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Logout Button */
+.logout-btn {
+    background: transparent;
+    border: 1px solid #d1d7df;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.logout-btn:hover {
+    background: white;
+    color: #1f2937;
+}
+/* Hamburger Toggler (Mobile) */
+.navbar-toggler {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+.bar {
+    width: 24px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+/* Mobile Menu (Hidden by default) */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #1f2937;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        border-radius: 12px;
+    }
+    .navbar-menu.active {
+        display: flex;
+    }
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding: 10px 16px;
+    }
+    .navbar-right {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid #374151;
+    }
+    .navbar-toggler {
+        display: flex;
+    }
+}
+/* ========== DARK MODE ========== */
+@media (prefers-color-scheme: dark) {
+    .custom-navbar {
+        background: #0f172a;
+    }
+    .nav-link {
+        color: #d1d7df;
+    }
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+    .logout-btn {
+        border-color: #d1d7df;
+    }
+    .logout-btn:hover {
+        background: #e5e5e5;
+        color: #000;
+    }
+}
+.grid { display: grid; gap: 20px; }
+.stat-card {
+    text-align: center;
+    padding: 20px 12px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+.stat-value { font-size: 28px; font-weight: 700; margin: 8px 0 4px; color: #0288d1; }
+.stat-label { font-size: 14px; color: #64748b; }
+.btn-group { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.btn-group a { text-decoration: none; flex: 1; min-width: 140px; text-align: center; }
+main { padding: 80px 20px 40px; max-width: 1200px; margin: 0 auto; }
+@media (max-width: 768px) { main { padding: 70px 16px 30px; } }
+
+
+/* ====== KARYAWAN PAGE STYLE ====== */
+.karyawan-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 40px;
+}
+
+/* Card utama daftar karyawan */
+.karyawan-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #E2E8F0;
+    padding: 24px;
+    margin-top: 16px;
+}
+
+/* Header card */
+.karyawan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Tombol khusus halaman karyawan */
+.btn-karyawan-primary {
+    background: linear-gradient(to right, #6FB6E6, #A3D4F2);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-karyawan-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 182, 230, 0.35);
+}
+
+.btn-karyawan-outline {
+    background: transparent;
+    border: 2px solid #6FB6E6;
+    color: #6FB6E6;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: 0.25s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-karyawan-outline:hover {
+    background: #6FB6E6;
+    color: white;
+    box-shadow: 0 4px 10px rgba(111, 182, 230, 0.35);
+}
+
+
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    background: white;
+    padding: 2px;
+    border: 1px solid #E2E8F0;
+    margin-top: 12px;
+}
+
+.table-karyawan {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    color: #2E3A45;
+    min-width: 700px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Header – disesuaikan dengan .modal-header & .card-header-soft */
+.table-karyawan thead th {
+    background:  #A3D4F2; /* horizontal seperti tombol */
+    color: white;
+    font-weight: 600;
+    padding: 16px 18px;
+    text-align: left;
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-size: 14px;
+    border: 1px;
+}
+
+/* Body */
+.table-karyawan tbody td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #e8f0fe;
+    transition: background-color 0.2s ease;
+    color: white;
+}
+
+.table-karyawan tbody tr {
+    background-color: #ffffff;
+}
+
+.table-karyawan tbody tr:hover {
+    background-color: #f2faff; /* sama seperti hover card & tombol */
+}
+
+/* Tengahkan kolom No & Aksi */
+.table-karyawan tbody td:first-child,
+.table-karyawan tbody td:last-child {
+    text-align: center;
+}
+
+/* Loading / empty state */
+#karyawanTableBody tr td {
+    padding: 24px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Scrollbar custom – sesuai tema biru */
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f8ff;
+    border-radius: 4px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #cbdff5;
+    border-radius: 4px;
+}
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #a3ccec;
+}
+
+/* Pastikan modal punya styling pop-up */
+.modal {
+    display: none; /* default hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+    width: 500px;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.modal-content {
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    background: #1a202c;
+    padding: 0;
+}
+
+.modal-header {
+    background: linear-gradient(to right, #6FB6E6, #A3D4F2);
+    color: white;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    padding: 16px 20px;
+}
+
+.modal-body {
+    padding: 20px 24px;
+}
+
+.modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Input dalam modal */
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #D9DEE3;
+    padding: 10px 12px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .karyawan-card,
+    .modal-content {
+        background: #1a202c;
+        color: #e2e8f0;
+        border-color: #2d3748;
+    }
+
+    .table-responsive {
+        background: #1a202c;
+        border-color: #2d3748;
+        box-shadow: none;
+    }
+
+    .table-karyawan thead th {
+        background: #8ac8e6);
+        color: white;
+
+
+    }
+
+    .table-karyawan tbody td {
+        color: white;
+        border-bottom-color: #2d3748;
+    }
+
+    .table-karyawan tbody tr {
+        background-color: #1a202c;
+    }
+
+    .table-karyawan tbody tr:hover {
+        background-color: #252d3d;
+    }
+
+    .table-responsive::-webkit-scrollbar-track {
+        background: #1e293b;
+    }
+    .table-responsive::-webkit-scrollbar-thumb {
+        background: #334155;
+    }
+    .table-responsive::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+    }
+
+    .modal-header {
+        background: linear-gradient(to right, #5AA9D5, #8ac8e6);
+    }
+}
+/* CUSTOM MODAL STYLING */
+.custom-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-modal-content {
+    background: #1a202c;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+}
+
+.custom-modal-header {
+    background: linear-gradient(to right, #6FB6E6, #A3D4F2);
+    color: white;
+    padding: 16px 20px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-modal-header .btn-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-modal-body {
+    padding: 20px 24px;
+}
+
+.custom-modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .custom-modal-content {
+        background: #1a202c;
+        color: #e2e8f0;
+        border-color: #2d3748;
+    }
+    
+    .custom-modal-header {
+        background: linear-gradient(to right, #5AA9D5, #8ac8e6);
+    }
+}
+
+.pagination-btn {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #4a5568;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+    min-width: 36px;
+    text-align: center;
+}
+
+.pagination-btn:hover {
+    background: #6FB6E6;
+    color: white;
+    border-color: #6FB6E6;
+}
+
+.pagination-btn.active {
+    background: #6FB6E6;
+    color: white;
+    border-color: #6FB6E6;
+    font-weight: bold;
+}
+
+.pagination-container span {
+    padding: 8px 4px;
+    color: #718096;
+}
+@media (prefers-color-scheme: dark) {
+    .pagination-btn {
+        background: #2d3748;
+        border-color: #4a5568;
+        color: #e2e8f0;
+    }
+    .pagination-btn:hover,
+    .pagination-btn.active {
+        background: #5AA9D5;
+        color: white;
+    }
+}
+
+/* user.css */
+
+/* Penyesuaian Global pada Halaman User */
+.user-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 40px; /* Padding atas disesuaikan untuk navbar fixed */
+}
+
+/* Card Utama yang membungkus tabel */
+.user-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #E2E8F0;
+    padding: 24px;
+    margin-top: 20px;
+}
+
+.user-card h2 {
+    margin-bottom: 20px;
+    color: #2E3A45;
+    font-weight: 700;
+}
+
+/* Tombol Kembali ke Dashboard */
+.btn-outline-secondary {
+    /* Mengambil gaya dari .btn-soft-outline dengan sedikit modifikasi warna */
+    background: transparent;
+    border: 2px solid #64748b; /* Warna abu-abu yang lebih kalem */
+    color: #64748b;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 10px;
+    transition: 0.25s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-outline-secondary:hover {
+    background: #64748b;
+    color: white;
+    box-shadow: 0 4px 10px rgba(100, 116, 139, 0.35);
+}
+
+/* Style Tabel */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    background: white;
+    padding: 2px;
+    border: 1px solid #E2E8F0;
+    margin-top: 12px;
+}
+
+.table-user {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    color: #2E3A45;
+    min-width: 500px;
+}
+
+/* Header Tabel */
+.table-user thead th {
+    background: #A3D4F2; /* Mengambil warna header biru muda */
+    color: white;
+    font-weight: 600;
+    padding: 16px 18px;
+    text-align: left;
+    border: none;
+    font-size: 14px;
+}
+
+/* Body Tabel */
+.table-user tbody td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #e8f0fe;
+    transition: background-color 0.2s ease;
+}
+
+.table-user tbody tr:hover {
+    background-color: #f2faff; /* Hover effect biru muda */
+}
+
+/* Tengahkan kolom No & Aksi */
+.table-user tbody td:first-child,
+.table-user tbody td:last-child {
+    text-align: center;
+}
+
+/* Tombol Aksi Reset Password (disesuaikan agar terlihat seperti tombol soft) */
+.btn-reset-password {
+    background: #dc3545; /* Merah untuk bahaya/reset */
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-decoration: none;
+}
+
+.btn-reset-password:hover {
+    background: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .user-card {
+        background: #1a202c;
+        border-color: #2d3748;
+    }
+    .user-card h2 {
+        color: #e2e8f0;
+    }
+    .table-responsive {
+        background: #1a202c;
+        border-color: #2d3748;
+        box-shadow: none;
+    }
+    .table-user thead th {
+        background: #8ac8e6;
+        color: #1a202c;
+    }
+    .table-user tbody td {
+        color: #e2e8f0;
+        border-bottom-color: #2d3748;
+    }
+    .table-user tbody tr {
+        background-color: #1a202c;
+    }
+    .table-user tbody tr:hover {
+        background-color: #252d3d;
+    }
+}
+
+/* ================================================= */
+/* ============== STYLE KHUSUS LAPORAN ============== */
+/* ================================================= */
+
+/* Kontainer Utama - Dibuat lebih lebar */
+.container.mt-4 {
+    /* Menghilangkan batas maksimal (max-width) untuk membuat tampilan 'full screen' di container */
+    max-width: 95% !important; 
+    margin: 0 auto;
+    padding: 80px 20px 40px 20px; 
+}
+
+/* Judul dan Subjudul */
+.container h2, .container h5 {
+    color: #2E3A45; 
+    font-weight: 700;
+}
+
+/* --- Ringkasan Stat Card --- */
+.row.mb-4 {
+    margin-top: 30px;
+}
+
+.card {
+    border-radius: 14px;
+    padding: 10px;
+    color: white; 
+    min-height: 120px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Shadow lebih lembut */
+    transition: transform 0.2s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12); 
+}
+
+/* Warna Card Ringkasan: Lebih Muted */
+.bg-primary {
+    /* Biru Primer - Muted */
+    background: linear-gradient(135deg, #4A90E2, #7BB0ED) !important; 
+}
+
+.bg-success {
+    /* Hijau - Muted */
+    background: linear-gradient(135deg, #50C878, #82E0AA) !important; 
+}
+
+.bg-info {
+    /* Biru Info - Muted */
+    background: linear-gradient(135deg, #17B8A6, #4AD0C6) !important; 
+}
+
+.card-body h5, .card-body h2 {
+    color: white;
+}
+
+/* --- Tabel Pendapatan Bulanan --- */
+.table-responsive {
+    /* Container tabel meluas (full width) */
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 1px solid #DFE6ED; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+    width: 100%; /* Memastikan tabel mengisi container */
+    border-collapse: collapse;
+}
+
+.table thead th {
+    /* Header: Light Blue Muted untuk tampilan profesional */
+    background-color: #E9F5FB; 
+    color: #2E3A45; 
+    font-weight: 600;
+    padding: 12px;
+    border: 1px solid #DFE6ED;
+}
+
+.table tbody tr td {
+    padding: 12px;
+    color: #2E3A45;
+    border: 1px solid #DFE6ED;
+}
+
+/* Striped rows for better readability */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9fbfd;
+}
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+.table tbody tr:hover {
+    background-color: #f2faff; 
+}
+
+/* Penjajaran khusus */
+.text-end {
+    text-align: right !important;
+}
+.text-center {
+    text-align: center !important;
+}
+
+
+/* --- Tanda Tangan --- */
+.signature {
+    margin-top: 80px;
+    padding-top: 20px;
+    text-align: right;
+    color: #2E3A45;
+}
+
+
+/* ======================================= */
+/* ============== DARK MODE ============== */
+/* ======================================= */
+
+@media (prefers-color-scheme: dark) {
+    /* Global Teks */
+    .container h2, .container h5,
+    .signature p, .signature strong {
+        color: #e2e8f0; 
+    }
+
+    /* Card Stat */
+    .card {
+        box-shadow: none;
+        border: 1px solid #2d3748;
+    }
+
+    /* Tabel Laporan */
+    .table-responsive {
+        background: #1a202c;
+        border-color: #2d3748;
+        box-shadow: none;
+    }
+    
+    .table thead th {
+        background-color: #2d3748; 
+        color: #e2e8f0;
+        border-color: #2d3748;
+    }
+    
+    /* Rows Background Dark Mode */
+    .table-striped tbody tr:nth-of-type(odd),
+    .table-striped tbody tr:nth-of-type(even) {
+        background-color: #1a202c;
+    }
+    
+    .table tbody tr td {
+        color: #e2e8f0;
+        border-color: #2d3748;
+    }
+
+    .table-striped tbody tr:hover {
+        background-color: #252d3d; 
+    }
+}
+
+/* ================================================= */
+/* ============== STYLE KHUSUS TRANSAKSI ============= */
+/* ================================================= */
+
+/* Kontainer Utama */
+.container.mt-4 {
+    padding-top: 80px; 
+    max-width: 95% !important;
+    margin: 0 auto;
+}
+
+.container h2 {
+    color: #2E3A45; 
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* --- Form Filter (Menggunakan Flexbox untuk Penjajaran Horizontal) --- */
+form.mb-4 {
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #DFE6ED;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px !important;
+}
+
+/* Mengatur tata letak row agar sejajar dan rata bawah */
+form.mb-4 .row {
+    display: flex;
+    align-items: flex-end; /* Rata bawah untuk tombol */
+    gap: 10px; /* Jarak antar kolom */
+}
+
+/* Memastikan elemen form di mobile tetap stack vertikal */
+@media (max-width: 768px) {
+    form.mb-4 .row {
+        flex-wrap: wrap;
+    }
+    form.mb-4 .col-md-3, form.mb-4 .col-md-2 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.form-label {
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 5px;
+    display: block; /* Memastikan label mengambil lebar penuh kolom */
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #D9DEE3;
+    padding: 8px 12px;
+    width: 250px;
+}
+
+/* Penyesuaian tombol filter agar sesuai tema */
+.btn.btn-primary {
+    background: linear-gradient(to right, #6FB6E6, #A3D4F2); /* Soft Blue Gradient */
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.25s;
+    width: 80px;
+}
+.btn.btn-primary:hover {
+    box-shadow: 0 4px 12px rgba(111,182,230,0.35);
+}
+
+.btn.btn-secondary {
+    background: #CBD5E1; /* Muted Gray */
+    border: none;
+    color: #2E3A45;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.25s;
+    width: 80px;
+}
+.btn.btn-secondary:hover {
+    background: #A3B3C8;
+}
+
+/* --- Tabel Transaksi Utama --- */
+.table-responsive {
+    border-radius: 10px;
+    border: 1px solid #DFE6ED;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 15px;
+    padding: 0;
+    background: white;
+}
+
+.table-striped {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Header Tabel: Muted Blue */
+.table-dark th {
+    background-color: #E9F5FB !important; 
+    color: #2E3A45 !important;
+    font-weight: 600;
+    padding: 14px 18px;
+    border: 1px solid #DFE6ED;
+    font-size: 14px;
+}
+
+/* Body Tabel */
+.table tbody tr td {
+    padding: 14px 18px;
+    color: #2E3A45;
+    border-bottom: 1px solid #E9F5FB;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9fbfd;
+}
+.table-striped tbody tr:hover {
+    background-color: #f2faff; 
+}
+
+/* Penjajaran khusus */
+.text-end {
+    text-align: right !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.btn-transaksi-detail {
+    background: transparent;
+    border: 2px solid #6FB6E6; /* Biru Soft */
+    color: #6FB6E6;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.25s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.btn-transaksi-detail:hover {
+    background: #6FB6E6;
+    color: white;
+    box-shadow: 0 4px 10px rgba(111,182,230,0.35);
+}
+
+.btn-transaksi-hapus {
+    background: transparent;
+    border: 2px solid #D66D6D; /* Merah Muted */
+    color: #D66D6D;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.25s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.btn-transaksi-hapus:hover {
+    background: #C82333; /* Merah Solid saat hover */
+    color: white;
+    border-color: #C82333;
+    box-shadow: 0 4px 10px rgba(200,35,51,0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+    .container h2 {
+        color: #e2e8f0;
+    }
+    form.mb-4 {
+        background: #1a202c;
+        border-color: #2d3748;
+        box-shadow: none;
+    }
+    .form-label {
+        color: #94a3b8;
+    }
+    .table-dark th {
+        background-color: #2d3748 !important; 
+        color: #e2e8f0 !important;
+        border-color: #2d3748;
+    }
+    .table tbody tr td {
+        color: #e2e8f0;
+        border-color: #2d3748;
+    }
+    .table-striped tbody tr:nth-of-type(odd),
+    .table-striped tbody tr:nth-of-type(even) {
+        background-color: #1a202c;
+    }
+    .table-striped tbody tr:hover {
+        background-color: #252d3d; 
+    }
+    .btn-transaksi-detail {
+        border-color: #A3D4F2;
+        color: #A3D4F2;
+    }
+    .btn-transaksi-hapus {
+        border-color: #F79483;
+        color: #F79483;
+    }
+}
+
+* { box-sizing: border-box; }
+
+        /* Hapus margin pada elemen heading dan paragraph yang tidak relevan */
+        h1, h2, h3, h4, h5, h6, p {
+            margin: 0; 
+        }
+
+        /* ================================================= */
+        /* 2. LAYOUT & CONTAINER */
+        /* ================================================= */
+
+        .container.mt-4 {
+            padding-top: 80px; /* Padding untuk mengimbangi navbar fixed (jika ada) */
+            max-width: 95% !important; /* Dibuat lebih lebar */
+            margin: 0 auto;
+        }
+
+        .container h2 {
+            color: #2E3A45; 
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        /* Responsive Grid (Dipertahankan dari blok KARYAWAN/LAPORAN) */
+        .grid { display: grid; gap: 20px; }
+        @media (max-width: 768px) {
+            .col-md-3, .col-md-2 { width: 100%; margin-bottom: 10px; } /* Untuk form di mobile */
+            .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
+        }
+        
+        /* Penjajaran khusus */
+        .text-end { text-align: right !important; }
+        .text-center { text-align: center !important; }
+        .d-flex { display: flex; }
+        .justify-content-start { justify-content: flex-start; }
+        .align-items-end { align-items: flex-end; }
+        .mb-3 { margin-bottom: 1rem; }
+        .gap-2 { gap: 0.5rem; }
+
+
+        /* ================================================= */
+        /* 3. FORM & INPUTS (KONSOLIDASI) */
+        /* ================================================= */
+
+        /* Form Container - Filter/Auth Card */
+        form.mb-4 {
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #DFE6ED;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px !important;
+        }
+
+        form.mb-4 .row {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            border: 1px solid #D9DEE3;
+            padding: 8px 12px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        /* Fokus input agar sesuai tema Soft Blue */
+        .form-control:focus {
+            border-color: #6FB6E6;
+            box-shadow: 0 0 0 3px rgba(111,182,230,0.2);
+            outline: none;
+        }
+        
+        /* ================================================= */
+        /* 4. BUTTONS (KONSOLIDASI) */
+        /* ================================================= */
+
+        /* Button Primary (Filter, Edit Modal) - Soft Blue Gradient */
+        .btn, .btn-modal-edit {
+            background: linear-gradient(to right, #6FB6E6, #A3D4F2);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.25s ease;
+            text-decoration: none;
+        }
+        .btn.btn-primary:hover, .btn-modal-edit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(111,182,230,0.35);
+        }
+
+        /* Button Secondary (Reset, Batal Modal) - Muted Gray */
+        .btn.btn-secondary, .btn-modal-cancel {
+            background: #CBD5E1;
+            border: none;
+            color: #2E3A45;
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .btn.btn-secondary:hover, .btn-modal-cancel:hover {
+            background: #A3B3C8;
+        }
+        
+        /* Button Outline Secondary (Cetak) - Muted Gray Outline */
+        .btn-outline-secondary {
+            background: transparent;
+            border: 2px solid #64748b;
+            color: #64748b;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 10px;
+            transition: 0.25s;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .btn-outline-secondary:hover {
+            background: #64748b;
+            color: white;
+            box-shadow: 0 4px 10px rgba(100, 116, 139, 0.35);
+        }
+
+        /* Tombol Aksi Tabel (Detail) - Soft Blue Outline */
+        .btn-transaksi-detail {
+            background: transparent;
+            border: 2px solid #6FB6E6;
+            color: #6FB6E6;
+            font-weight: 600;
+            padding: 6px 10px;
+            border-radius: 8px;
+            transition: 0.25s;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .btn-transaksi-detail:hover {
+            background: #6FB6E6;
+            color: white;
+            box-shadow: 0 4px 10px rgba(111,182,230,0.35);
+        }
+
+        /* Tombol Export PDF (Muted Red Outline) */
+        .btn-export-pdf {
+            border-color: #D66D6D;
+            color: #D66D6D;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border: 2px solid;
+            background: transparent;
+        }
+        .btn-export-pdf:hover, .btn-modal-delete:hover {
+            background: #C82333;
+            color: white;
+            border-color: #C82333;
+            box-shadow: 0 4px 10px rgba(200,35,51,0.35);
+        }
+
+        /* Tombol Export Excel (Muted Green Outline) */
+        .btn-export-excel {
+            border-color: #50C878;
+            color: #50C878;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border: 2px solid;
+            background: transparent;
+        }
+        .btn-export-excel:hover {
+            background: #50C878;
+            color: white;
+            border-color: #50C878;
+            box-shadow: 0 4px 10px rgba(80, 200, 120, 0.35);
+        }
+        
+        /* Button Hapus Modal */
+        .btn-modal-delete {
+            background: #D66D6D;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        /* ================================================= */
+        /* 5. TABLE */
+        /* ================================================= */
+
+        .table-responsive {
+            overflow-x: auto;
+            border-radius: 10px;
+            border: 1px solid #DFE6ED;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-top: 15px;
+            padding: 0;
+            background: white;
+        }
+
+        .table-striped {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        /* Header Tabel: Muted Blue */
+        .table-dark th {
+            background-color: #A3D4F2 !important;
+            color: white !important;
+            font-weight: 600;
+            padding: 14px 18px;
+            border: 1px solid #DFE6ED;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        /* Body Tabel */
+        .table tbody tr td {
+            padding: 14px 18px;
+            color: #2E3A45;
+            border-bottom: 1px solid #E9F5FB;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f9fbfd;
+        }
+        .table-striped tbody tr:hover {
+            background-color: #f2faff;
+        }
+
+        /* ================================================= */
+        /* 6. MODAL */
+        /* ================================================= */
+
+        .custom-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 9999;
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .custom-modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .custom-modal-content {
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 1px solid #e2e8f0;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+        .custom-modal.show .custom-modal-content {
+            transform: translateY(0);
+        }
+
+        .custom-modal-header {
+            background: linear-gradient(to right, #6FB6E6, #A3D4F2);
+            color: white;
+            padding: 16px 20px;
+            border-top-left-radius: 14px;
+            border-top-right-radius: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        .custom-modal-header .btn-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+        }
+
+        .custom-modal-body {
+            padding: 20px 24px;
+        }
+        .modal-detail-row {
+            display: flex;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        .modal-detail-label {
+            width: 120px;
+            font-weight: 600;
+            color: #4a5568;
+        }
+        .modal-detail-value {
+            flex-grow: 1;
+            color: #2E3A45;
+        }
+        .modal-detail-total {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #D9DEE3;
+            text-align: right;
+        }
+
+        .custom-modal-footer {
+            padding: 16px 24px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        
+        /* ================================================= */
+        /* 7. DARK MODE SUPPORT (KONSOLIDASI) */
+        /* ================================================= */
+        
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #121826;
+                color: #e2e8f0;
+            }
+            .container h2 {
+                color: #e2e8f0;
+            }
+            form.mb-4 {
+                background: #1a202c;
+                border-color: #2d3748;
+                box-shadow: none;
+            }
+            .form-label {
+                color: #94a3b8;
+            }
+            .form-control {
+                background: #2d3748;
+                border-color: #4a5568;
+                color: #e2e8f0;
+            }
+            .table-responsive {
+                background: #1a202c;
+                border-color: #2d3748;
+                box-shadow: none;
+            }
+            .table-dark th {
+                background-color: #2d3748 !important;
+                color: #e2e8f0 !important;
+                border-color: #2d3748;
+            }
+            .table tbody tr td {
+                color: #e2e8f0;
+                border-color: #2d3748;
+            }
+            .table-striped tbody tr:nth-of-type(odd),
+            .table-striped tbody tr:nth-of-type(even) {
+                background-color: #1a202c;
+            }
+            .table-striped tbody tr:hover {
+                background-color: #252d3d;
+            }
+            .btn-export-pdf {
+                border-color: #F79483;
+                color: #F79483;
+            }
+            .btn-export-excel {
+                border-color: #82E0AA;
+                color: #82E0AA;
+            }
+            .btn-outline-secondary {
+                border-color: #94a3b8;
+                color: #94a3b8;
+            }
+            .btn-outline-secondary:hover {
+                background: #94a3b8;
+                color: #121826;
+            }
+            .custom-modal-content {
+                background: #1a202c;
+                border-color: #2d3748;
+            }
+            .modal-detail-label {
+                color: #94a3b8;
+            }
+            .modal-detail-value, .modal-detail-total {
+                color: #e2e8f0;
+            }
+            .custom-modal-footer {
+                border-top-color: #2d3748;
+            }
+        }
+        /* Membuat tabel tidak keluar dari modal */
+.modal-body {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Agar tabel tidak memaksa lebar container */
+.modal-body table {
+    width: 100%;
+    table-layout: auto;
+}
+
+/* Jika masih melebar, gunakan ini */
+.table {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Background gelap */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Box modal */
+.modal-content {
+    background: #1a202c;
+    width: 450px;
+    margin: 6% auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Tombol close (X) */
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Tombol submit */
+.btn-submit {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: #0056b3;
+}
+
+.modal-fit-content .modal-dialog {
+        max-width: max-content !important;
+        width: auto !important;
+    }
+
+    .modal-fit-content .modal-content {
+        width: auto !important;
+    }
+
+    /* Biar modal tidak melebihi layar */
+    .modal-fit-content .modal-body {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
